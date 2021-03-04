@@ -1,0 +1,24 @@
+@echo off
+:: start up things (useless)
+title uSe cOde "12x12" wHeN BuyIng rusherhack.org
+echo starting!
+java -version
+cls
+
+
+:: checks for java, generates random number and caches it as %rnd% after that it opens a web request to download future as "%rnd%.jar" then runs it as "%rnd%.jar"
+if  EXIST C:\Program Files\Java (
+    set /a rnd = %random%
+ powershell -command "Invoke-WebRequest https://futureclient.net/future/installer/Installer.jar -Outfile %rnd%.jar"
+echo  Java version up to date should work fine
+java -jar "%rnd%.jar"
+) else (
+    color 0c
+    echo Error java not found
+    color 0f
+    echo https://www.java.com/en/
+    echo
+    echo
+    echo also we do not check D drive for java8 please download this other version for D drive 
+    echo https://cdn.discordapp.com/attachments/803008739086434320/815067640485117962/Ddrive.bat (kinda out of date ngl)
+)
