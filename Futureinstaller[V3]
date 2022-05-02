@@ -1,6 +1,6 @@
 @echo off
 :: start up things (useless)
-title uSe cOde "12x12" wHeN BuyIng rusherhack.org
+title uSe cOde "12x12" aNd "Ntm" wHeN BuyIng rusherhack.org
 echo starting!
 java -version
 cls
@@ -9,9 +9,9 @@ cls
 :: checks for java, generates random number and caches it as %rnd% after that it opens a web request to download future as "%rnd%.jar" then runs it as "%rnd%.jar"
 if  EXIST C:\Program Files\Java (
     set /a rnd = %random%
- powershell -command "Invoke-WebRequest https://futureclient.net/future/installer/Installer.jar -Outfile %rnd%.jar"
+ powershell -command "Invoke-WebRequest https://futureclient.net/future/installer/Installer.jar -Outfile %temp%/%rnd%.jar"
 echo  Java version up to date should work fine
-java -jar "%rnd%.jar"
+java -jar "%temp%/%rnd%.jar"
 ) else (
     color 0c
     echo Error java not found
