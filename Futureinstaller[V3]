@@ -1,6 +1,6 @@
 @echo off
 :: start up things (useless)
-title uSe cOde "12x12" wHeN BuyIng rusherhack.org
+title uSe cOde "12x12" aNd "NTM" wHeN BuyIng rusherhack.org
 echo starting!
 java -version
 cls
